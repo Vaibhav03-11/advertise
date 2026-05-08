@@ -61,14 +61,14 @@ def _write_json(path: Path, data: list):
 # ── Pydantic models ───────────────────────────────────────
 class ContactForm(BaseModel):
     name:    str
-    email:   EmailStr
+    email:   str
     phone:   str | None = None
     message: str
     subject: str | None = "General Inquiry"
 
 
 class NewsletterSignup(BaseModel):
-    email: EmailStr
+    email: str
     name:  str | None = None
 
 
