@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion'
 import { Download as DownloadIcon, Shield, Smartphone, CheckCircle, Zap } from 'lucide-react'
-
+              <a
+                href={`${API_BASE_URL}/api/download`}
+                id="main-download-btn"
+                download="JewelStack.apk"
+                className="btn-gold flex items-center gap-4 text-lg px-10 py-5 shadow-gold-lg"
+              >
 const trustItems = [
   { icon: Shield,      text: 'Firebase Secured Data' },
   { icon: Smartphone,  text: 'Android 6.0+ Compatible' },
@@ -107,7 +112,7 @@ export default function Download() {
               whileTap={{ scale: 0.98 }}
             >
               <a
-                href="http://localhost:8000/api/download"
+                href={`${API_BASE_URL}/api/download`}
                 id="main-download-btn"
                 download="JewelStack.apk"
                 className="btn-gold flex items-center gap-4 text-lg px-10 py-5 shadow-gold-lg"
