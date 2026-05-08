@@ -36,12 +36,13 @@ app.add_middleware(
 )
 
 # ── Data store (file-based for simplicity) ────────────────
-DATA_DIR = Path("data")
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 DOWNLOADS_FILE  = DATA_DIR / "downloads.json"
 CONTACTS_FILE   = DATA_DIR / "contacts.json"
 NEWSLETTER_FILE = DATA_DIR / "newsletter.json"
-APK_PATH        = Path(os.getenv("APK_PATH", "static/jewelstack.apk")).resolve()
+APK_PATH        = Path(os.getenv("APK_PATH", str(BASE_DIR / "static" / "jewelstack.apk"))).resolve()
 
 # ── Startup check ─────────────────────────────────────────
 print(f"\nAPK path: {APK_PATH}")
