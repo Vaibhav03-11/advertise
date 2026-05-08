@@ -13,7 +13,7 @@ Routes:
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 import os, json, datetime
 from pathlib import Path
 from dotenv import load_dotenv
