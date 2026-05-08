@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion'
 import { Download as DownloadIcon, Shield, Smartphone, CheckCircle, Zap } from 'lucide-react'
-              <a
-                href={`${API_BASE_URL}/api/download`}
-                id="main-download-btn"
-                download="JewelStack.apk"
-                className="btn-gold flex items-center gap-4 text-lg px-10 py-5 shadow-gold-lg"
-              >
+
+// API base (set VITE_API_BASE in your Vite / Vercel env vars)
+const API_BASE_URL = import.meta.env.VITE_API_BASE || 'http://localhost:8000'
+
 const trustItems = [
   { icon: Shield,      text: 'Firebase Secured Data' },
   { icon: Smartphone,  text: 'Android 6.0+ Compatible' },
